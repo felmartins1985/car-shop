@@ -1,4 +1,3 @@
-import { isValidObjectId } from 'mongoose';
 import IService from '../interfaces/IService';
 import { ICar, CarZodSchema } from '../interfaces/ICar';
 import { IModel } from '../interfaces/IModel';
@@ -26,7 +25,6 @@ class CarService implements IService<ICar> {
     if (!parsed.success) {
       throw parsed.error;
     }
-    if (!isValidObjectId(_id)) throw new Error(ErrorTypes.InvalidMongoId);
     const updated = await this._car.update(_id, parsed.data);
     if (!updated) {
       throw new Error(ErrorTypes.EntityNotFound);

@@ -18,5 +18,14 @@ const carMockWithId:ICar & { _id:string } = {
   seatsQty: 2,
   doorsQty: 2
 };
+const carMockInvalid={
+  _id: "4edd40c86762e0fb12000003",
+  model: "Ferrari Maranello",
+  year: 1963,
+  color: 3,
+  buyValue: 3500000,
+  seatsQty: 2,
+  doorsQty: 2
+}
 
-export { carMock, carMockWithId };
+export { carMock, carMockWithId, carMockInvalid };
