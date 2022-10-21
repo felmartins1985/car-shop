@@ -9,7 +9,7 @@ const VehicleZodSchema = z.object({
     required_error: 'Year is required',
     invalid_type_error: 'Year must be a number',
   }).int({ message: 'Must be a integer' })
-    .positive({ message: 'Must be a positiver number' })
+    .positive({ message: 'Must be a positive number' })
     .lte(2022, { message: 'Year must be less than 2022' })
     .gte(1900, { message: 'Year must be greater than 1900' }),
   color: z.string({
